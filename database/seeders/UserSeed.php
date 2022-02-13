@@ -20,7 +20,6 @@ class UserSeed extends Seeder
         ];
 
         foreach ($items as $item) {
-            $item['password'] = \Hash::make($item['password']); //encrypt password
             \App\Models\User::create($item);
         }
     }
