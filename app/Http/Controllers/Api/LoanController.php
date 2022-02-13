@@ -30,7 +30,7 @@ class LoanController extends Controller
                 //insert loan application
                 if($loan = Loan::create($data))
                 {
-                    return ApiresponseController::apiresponse(1,'Load applied successfully.',ApiresponseController::mergeWithKey($loan->toArray()));
+                    return ApiresponseController::apiresponse(1,'Loan applied successfully.',ApiresponseController::mergeWithKey($loan->toArray()));
                 }
                 else
                 {

@@ -7,7 +7,6 @@ password -
 DB name - loanapp
 
 3) Commands to run after getting code:
-cd loanapp
 composer install
 php artisan migrate
 php artisan db:seed
@@ -24,6 +23,4 @@ password - 123456
 email - loanseeker@mailinator.com
 password - 123456
 
-7) For admin and user login api will be same and after login in response will get token.
-
-8) Use that token for authentication
+For more details documention for project word file is attached.
