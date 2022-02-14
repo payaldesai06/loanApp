@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Auth;
 
 class Loan extends Model
 {
@@ -17,7 +16,7 @@ class Loan extends Model
     public static function boot() {
         parent::boot();
         static::creating(function($loan) { // before delete() method call this
-            $loan->user_id = \Auth::user()->id;
+            //$loan->user_id = \Auth::user()->id;
         });
     }
 

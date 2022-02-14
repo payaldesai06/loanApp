@@ -9,6 +9,7 @@ use App\Models\LoanRepay;
 use Validator;
 use App\Http\Controllers\Api\ApiresponseController;
 use Commonhelper;
+use Auth;
 
 class LoanController extends Controller
 {
@@ -27,6 +28,7 @@ class LoanController extends Controller
         {
             try{
                 $data = $request->only('amount','loan_terms');
+                $data['user_id'] = Auth::user()->id;
                 //insert loan application
                 if($loan = Loan::create($data))
                 {
